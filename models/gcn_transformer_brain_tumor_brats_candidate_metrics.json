@@ -1,0 +1,92 @@
+{
+  "test_loss": 0.7879765033721924,
+  "test_accuracy": 0.6879668235778809,
+  "macro_f1": 0.660031332996429,
+  "class_names": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "confusion_matrix": [
+    [
+      118,
+      97,
+      17,
+      67
+    ],
+    [
+      10,
+      127,
+      82,
+      83
+    ],
+    [
+      2,
+      2,
+      297,
+      8
+    ],
+    [
+      4,
+      2,
+      2,
+      287
+    ]
+  ],
+  "per_class": {
+    "glioma": {
+      "precision": 0.8805970149253731,
+      "recall": 0.39464882943143814,
+      "f1_score": 0.5450346420323325
+    },
+    "meningioma": {
+      "precision": 0.5570175438596491,
+      "recall": 0.4205298013245033,
+      "f1_score": 0.47924528301886793
+    },
+    "notumor": {
+      "precision": 0.7462311557788944,
+      "recall": 0.9611650485436893,
+      "f1_score": 0.8401697312588401
+    },
+    "pituitary": {
+      "precision": 0.6449438202247191,
+      "recall": 0.9728813559322034,
+      "f1_score": 0.7756756756756756
+    }
+  },
+  "brats2020_test": {
+    "task": "top-1 glioma classification on glioma-positive FLAIR slices",
+    "slice_count": 224,
+    "glioma_top1_recall": 0.9464285714285714,
+    "mean_glioma_probability": 0.8634963631629944,
+    "predicted_class_counts": {
+      "glioma": 212,
+      "meningioma": 0,
+      "notumor": 12,
+      "pituitary": 0
+    }
+  },
+  "brats2020_split": {
+    "train_patients": 257,
+    "validation_patients": 55,
+    "test_patients": 56,
+    "train_slices": 2056,
+    "validation_slices": 220,
+    "test_slices": 224,
+    "max_train_slices_per_patient": 8,
+    "max_eval_slices_per_patient": 4
+  },
+  "training_accuracy": 0.8754904866218567,
+  "validation_accuracy": 0.769456684589386,
+  "test_dataset": "C:\\Users\\fatim\\OneDrive\\Documents\\brain-mri-gcn\\data\\Testing",
+  "duplicate_test_exclusions": {
+    "glioma": 0,
+    "meningioma": 2,
+    "notumor": 96,
+    "pituitary": 5
+  },
+  "preprocessing": "RGB, bilinear resize_with_pad to 128x128; identical to backend geometry",
+  "training_data_note": "BraTS 2020 provides glioma-positive FLAIR slices only; its test recall is reported separately and is not included in the four-class accuracy."
+}

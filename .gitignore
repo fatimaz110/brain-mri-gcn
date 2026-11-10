@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Trained model weights
+*.keras
+*.h5
+*.hdf5
+*.weights
+*.ckpt
+checkpoints/
+
+# MRI datasets and processed data
+data/
+processed_data/
+BraTS2020/
+*TrainingData*/
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Secrets and environment configuration
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db

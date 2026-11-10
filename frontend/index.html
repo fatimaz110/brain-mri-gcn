@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <a class="brand" href="#overview" aria-label="Ecoscan project overview">
+                <span class="brand-badge" aria-hidden="true">E</span>
+                <span class="brand-copy">
+                    <span class="eyebrow">ECOSCAN · RESEARCH PROJECT</span>
+                    <strong>Brain MRI Analysis</strong>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#overview">Overview</a>
+                <a href="#model">Approach</a>
+                <a href="#analysis">Analysis</a>
+                <a class="nav-cta" href="#analysis">Open analyzer <span aria-hidden="true">↗</span></a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" id="overview">
+                <div class="hero-copy">
+                    <p class="hero-kicker"><span class="kicker-mark"></span> SUSTAINABLE AI · FINAL YEAR PROJECT</p>
+                    <h1>Exploring a smarter approach to <span>brain MRI analysis.</span></h1>
+                    <p class="hero-description">
+                        A research prototype combining Graph Convolutional Networks and
+                        Transformer attention to classify brain MRI images into four dataset classes.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button-link primary-action" href="#analysis">Analyze a scan <span aria-hidden="true">→</span></a>
+                        <a class="button-link text-action" href="#model"><span class="play-mark" aria-hidden="true">▶</span> Explore the approach</a>
+                    </div>
+                    <div class="hero-footnote">
+                        <span class="live-dot" aria-hidden="true"></span>
+                        <span>Research demonstration only · Not for clinical diagnosis</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Diagram of the GCN and Transformer model approach">
+                    <div class="visual-grid" aria-hidden="true"></div>
+                    <div class="orbit orbit-one" aria-hidden="true"></div>
+                    <div class="orbit orbit-two" aria-hidden="true"></div>
+                    <span class="visual-node node-one" aria-hidden="true"></span>
+                    <span class="visual-node node-two" aria-hidden="true"></span>
+                    <span class="visual-node node-three" aria-hidden="true"></span>
+                    <div class="visual-caption"><span class="caption-pulse"></span> MODEL OVERVIEW</div>
+                    <div class="network-art" aria-hidden="true">
+                        <svg viewBox="0 0 440 300" role="presentation">
+                            <defs>
+                                <linearGradient id="nodeGlow" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#55e1d0" />
+                                    <stop offset="100%" stop-color="#7d83ff" />
+                                </linearGradient>
+                                <radialGradient id="coreGlow">
+                                    <stop offset="0%" stop-color="#1f9ba5" stop-opacity=".42" />
+                                    <stop offset="100%" stop-color="#1f9ba5" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                            <circle cx="220" cy="147" r="138" fill="url(#coreGlow)" />
+                            <g fill="none" stroke="#7bdedb" stroke-opacity=".34" stroke-width="1.5">
+                                <path d="M85 89 155 69 213 110 284 64 352 102" />
+                                <path d="M85 89 119 165 180 199 213 110 268 177 352 102" />
+                                <path d="M119 165 155 69 268 177 284 64" />
+                                <path d="M180 199 268 177 352 223 352 102" />
+                                <path d="M180 199 213 110 352 223" />
+                            </g>
+                            <g fill="#0d2333" stroke="url(#nodeGlow)" stroke-width="2.5">
+                                <circle cx="85" cy="89" r="7" /><circle cx="155" cy="69" r="8" />
+                                <circle cx="213" cy="110" r="9" /><circle cx="284" cy="64" r="7" />
+                                <circle cx="352" cy="102" r="8" /><circle cx="119" cy="165" r="8" />
+                                <circle cx="180" cy="199" r="7" /><circle cx="268" cy="177" r="10" />
+                                <circle cx="352" cy="223" r="7" />
+                            </g>
+                            <circle cx="220" cy="148" r="58" fill="#102e40" stroke="#55d5d0" stroke-opacity=".7" />
+                            <circle cx="220" cy="148" r="49" fill="none" stroke="#7d83ff" stroke-opacity=".38" stroke-dasharray="3 7" />
+                        </svg>
+                        <div class="model-core">
+                            <span class="core-symbol">G<span>+</span>T</span>
+                            <strong>GCN + Transformer</strong>
+                            <small>HYBRID MODEL</small>
+                        </div>
+                    </div>
+                    <div class="architecture-chip chip-graph"><span>01</span> Graph features</div>
+                    <div class="architecture-chip chip-attention"><span>02</span> Attention layers</div>
+                    <div class="class-strip">
+                        <span>GLIOMA</span><span>MENINGIOMA</span><span>PITUITARY</span><span>NO TUMOR</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="approach-section" id="model">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">THE WORKFLOW</p>
+                        <h2>From image to model output</h2>
+                    </div>
+                    <p>Designed to make each stage of this research prototype clear and inspectable.</p>
+                </div>
+                <div class="workflow-grid">
+                    <article class="workflow-card">
+                        <span class="workflow-number">01</span>
+                        <h3>Provide an image</h3>
+                        <p>Upload a PNG or JPEG brain MRI image for preprocessing and analysis.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-number">02</span>
+                        <h3>Classify with a hybrid</h3>
+                        <p>The trained GCN + Transformer returns its highest-scoring class and confidence.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-number">03</span>
+                        <h3>Review the explanation</h3>
+                        <p>When available, a saliency overlay indicates influential image regions—not tumor boundaries.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="analysis-section" id="analysis">
+                <div class="section-heading analysis-heading">
+                    <div>
+                        <p class="section-kicker">INTERACTIVE DEMONSTRATION</p>
+                        <h2>Analyze a brain MRI</h2>
+                    </div>
+                    <span class="research-badge"><span class="live-dot" aria-hidden="true"></span> Research use only</span>
+                </div>
+                <div class="content">
+                    <section class="upload-panel">
+                        <div class="panel-header">
+                            <span class="section-kicker">STEP 1 · IMAGE</span>
+                            <h3>Upload MRI Scan</h3>
+                            <p>Select a clear PNG or JPEG image to begin the analysis.</p>
+                        </div>
+
+                        <label class="dropzone" for="imageInput">
+                            <input type="file" id="imageInput" accept=".png,.jpg,.jpeg,image/png,image/jpeg">
+                            <div class="dropzone-content">
+                                <span class="upload-icon" aria-hidden="true">↑</span>
+                                <strong>Choose MRI image</strong>
+                                <small>PNG, JPG, or JPEG</small>
+                            </div>
+                        </label>
+
+                        <div class="actions">
+                            <button id="analyzeBtn" type="button">Analyze MRI <span aria-hidden="true">→</span></button>
+                            <button id="resetBtn" class="secondary" type="button">Clear</button>
+                        </div>
+                    </section>
+
+                    <section class="preview-panel">
+                        <div class="preview-header">
+                            <span class="section-kicker">STEP 2 · PREVIEW</span>
+                            <h3>Selected image</h3>
+                        </div>
+                        <div class="image-preview" id="imagePreview">
+                            <span>No image selected yet</span>
+                        </div>
+                    </section>
+                </div>
+
+                <section class="result-panel" id="resultPanel">
+                    <div class="result-header">
+                        <div>
+                            <span class="section-kicker">STEP 3 · MODEL OUTPUT</span>
+                            <h3>Analysis result</h3>
+                        </div>
+                        <span class="result-note">Prediction · Confidence · Saliency</span>
+                    </div>
+                    <div id="result" class="result-box" aria-live="polite" aria-atomic="true">
+                        <div class="result-placeholder">
+                            Upload a scan to view its prediction and analysis details.
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="page-footer">
+            <a class="footer-brand" href="#overview">ECOSCAN <span>·</span> SUSTAINABLE AI</a>
+            <span>Academic research demonstration. Not intended for clinical diagnosis or treatment decisions.</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
